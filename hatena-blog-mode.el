@@ -118,10 +118,7 @@
 (defun hatena-blog-build-xml ()
   "Build xml for hatena-blog."
   (interactive)
-  (let ((blog-title (read-string "Title: "
-                                 (save-excursion (goto-char (point-min))
-                                                 (search-forward-regexp "#* \\(.*\\)" nil t)
-                                                 (match-string 1))))
+  (let ((blog-title (read-string "Title: "))
         (blog-category (read-string "Category: "))
         (blog-is-draft (if (y-or-n-p "Send as draft? ") "yes" "no"))
         )
